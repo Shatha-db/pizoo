@@ -6,9 +6,13 @@ import { Toaster, toast } from "sonner";
 import Landing from "./pages/Landing";
 import Auth from "./pages/Auth";
 import Discover from "./pages/Discover";
+import Encounters from "./pages/Encounters";
 import Matches from "./pages/Matches";
 import Chat from "./pages/Chat";
 import Profile from "./pages/Profile";
+import LikesMe from "./pages/LikesMe";
+import Notifications from "./pages/Notifications";
+import UserProfile from "./pages/UserProfile";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 export const API = `${BACKEND_URL}/api`;
