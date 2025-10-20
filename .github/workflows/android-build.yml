@@ -22,9 +22,9 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
         cache: 'yarn'
-        cache-dependency-path: frontend/yarn.lock
+        cache-dependency-path: './frontend/yarn.lock'
     
     - name: Setup Java
       uses: actions/setup-java@v4
