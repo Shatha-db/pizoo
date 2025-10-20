@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Heart, X, MapPin, Users, MessageCircle, User as UserIcon, ChevronLeft, ChevronRight } from "lucide-react";
+import { Heart, X, MapPin, Users, MessageCircle, User as UserIcon, ChevronLeft, ChevronRight, Bell, Grid3x3, CreditCard, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { api } from "../App";
 import { toast } from "sonner";
