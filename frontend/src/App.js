@@ -64,12 +64,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={user ? <Navigate to="/discover" /> : <Landing />} />
-          <Route path="/auth" element={user ? <Navigate to="/discover" /> : <Auth setUser={setUser} />} />
+          <Route path="/" element={user ? <Navigate to="/encounters" /> : <Landing />} />
+          <Route path="/auth" element={user ? <Navigate to="/encounters" /> : <Auth setUser={setUser} />} />
+          <Route path="/encounters" element={<ProtectedRoute><Encounters user={user} /></ProtectedRoute>} />
           <Route path="/discover" element={<ProtectedRoute><Discover user={user} /></ProtectedRoute>} />
           <Route path="/matches" element={<ProtectedRoute><Matches user={user} /></ProtectedRoute>} />
+          <Route path="/likes-me" element={<ProtectedRoute><LikesMe user={user} /></ProtectedRoute>} />
+          <Route path="/notifications" element={<ProtectedRoute><Notifications user={user} /></ProtectedRoute>} />
           <Route path="/chat/:matchId" element={<ProtectedRoute><Chat user={user} /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile user={user} setUser={setUser} /></ProtectedRoute>} />
+          <Route path="/user/:userId" element={<ProtectedRoute><UserProfile user={user} /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
