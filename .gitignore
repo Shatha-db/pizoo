@@ -77,4 +77,25 @@ agenthub/agents/youtube/db
 .cache/
 
 # Mobile development
-android-sdk/ 
+android-sdk/
+
+# Android build files
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Gradle files
+.gradle/
+build/
+local.properties
+
+# Android Studio
+*.iml
+.idea/
+
+# Keystore files
+*.jks
+*.keystore
+key.properties 
