@@ -78,6 +78,13 @@ const Discover = ({ user }) => {
           
           <nav className="flex gap-2">
             <Button
+              data-testid="nav-encounters-btn"
+              onClick={() => navigate("/encounters")}
+              className="bg-white/10 hover:bg-white/20 text-white rounded-full px-6 py-5"
+            >
+              <Grid3x3 className="w-5 h-5" />
+            </Button>
+            <Button
               data-testid="nav-discover-btn"
               onClick={() => navigate("/discover")}
               className="bg-white/20 hover:bg-white/30 text-white rounded-full px-6 py-5"
@@ -90,6 +97,20 @@ const Discover = ({ user }) => {
               className="bg-white/10 hover:bg-white/20 text-white rounded-full px-6 py-5"
             >
               <Users className="w-5 h-5" />
+            </Button>
+            <Button
+              data-testid="nav-likes-btn"
+              onClick={() => navigate("/likes-me")}
+              className="bg-white/10 hover:bg-white/20 text-white rounded-full px-6 py-5"
+            >
+              <CreditCard className="w-5 h-5" />
+            </Button>
+            <Button
+              data-testid="nav-notifications-btn"
+              onClick={() => navigate("/notifications")}
+              className="bg-white/10 hover:bg-white/20 text-white rounded-full px-6 py-5"
+            >
+              <Bell className="w-5 h-5" />
             </Button>
             <Button
               data-testid="nav-profile-btn"
