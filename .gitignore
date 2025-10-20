@@ -98,4 +98,7 @@ local.properties
 # Keystore files
 *.jks
 *.keystore
-key.properties 
+key.properties -e 
+# Environment files
+*.env
+*.env.*
