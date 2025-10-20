@@ -173,6 +173,27 @@ const Discover = ({ user }) => {
                 
                 {/* User Info Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
+                  {/* Verified badge */}
+                  {currentUser.verified && (
+                    <div className="mb-3">
+                      <CheckCircle className="w-8 h-8 text-blue-500 fill-white inline-block" />
+                    </div>
+                  )}
+                  
+                  {/* Interests tags */}
+                  {currentUser.interests?.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {currentUser.interests.slice(0, 3).map((interest, idx) => (
+                        <span
+                          key={idx}
+                          className="bg-red-500 text-white text-sm px-3 py-1 rounded-full font-medium"
+                        >
+                          #{interest}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  
                   <h2 className="text-3xl font-bold mb-2">
                     {currentUser.name}, {currentUser.age}
                   </h2>
