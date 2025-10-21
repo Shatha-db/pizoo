@@ -369,7 +369,7 @@ async def get_likes_me(user_id: str = Depends(get_current_user)):
     my_liked_ids = [s['to_user_id'] for s in my_likes if s['action'] == 'like']
     
     # Filter out already matched
-    unmatched_likes = [l for l in likes if l['from_user_id'] not in my_liked_ids]
+    unmatched_likes = [like_item for like_item in likes if like_item['from_user_id'] not in my_liked_ids]
     
     # Get user details
     result = []
