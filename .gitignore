@@ -67,3 +67,7 @@ desktop.ini
 # Capacitor
 frontend/android/app/src/main/assets/public/
 frontend/ios/App/public/
+-e 
+# Environment files
+*.env
+*.env.*
