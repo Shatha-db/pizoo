@@ -70,7 +70,12 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "cap:sync": "npx cap sync",
+    "cap:sync:android": "npx cap sync android",
+    "cap:open:android": "npx cap open android",
+    "build:android": "./build-android.sh",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
