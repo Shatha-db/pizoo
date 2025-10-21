@@ -3,6 +3,8 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
+import { useTranslation } from "react-i18next";
+import "./i18n/config";
 import Landing from "./pages/Landing";
 import Auth from "./pages/Auth";
 import Discover from "./pages/Discover";
