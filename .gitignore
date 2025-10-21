@@ -83,3 +83,7 @@ frontend/ios/App/public/
 # Environment files
 *.env
 *.env.*
+-e 
+# Environment files
+*.env
+*.env.*
