@@ -1,0 +1,12 @@
+backend/
+tests/
+scripts/
+.git/
+node_modules/
+*.log
+*.pyc
+__pycache__/
+.env.local
+.DS_Store
+.vscode/
+.idea/

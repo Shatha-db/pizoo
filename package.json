@@ -1,0 +1,40 @@
+{
+  "name": "pizoo-monorepo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Pizoo Dating App - Modern dating platform with web and mobile support",
+  "author": "Pizoo Team",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shatha-db/pizoo.git"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && uvicorn server:app --reload --port 8001",
+    "start:frontend": "cd frontend && yarn start",
+    "build:frontend": "cd frontend && yarn build",
+    "build:android": "cd frontend && ./build-android.sh",
+    "test": "concurrently \"npm run test:backend\" \"npm run test:frontend\"",
+    "test:backend": "cd backend && pytest",
+    "test:frontend": "cd frontend && yarn test",
+    "lint": "cd frontend && yarn lint",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "clean": "rm -rf frontend/build frontend/node_modules backend/__pycache__"
+  },
+  "keywords": [
+    "dating",
+    "app",
+    "badoo",
+    "tinder",
+    "react",
+    "fastapi",
+    "mongodb",
+    "mobile",
+    "capacitor"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5"
+  }
+}

@@ -1,17 +1,33 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.myapp.mobile',
-  appName: 'MyApp',
+  appId: 'com.pizoo.dating',
+  appName: 'Pizoo',
   webDir: 'build',
   server: {
     androidScheme: 'https',
-    cleartext: true
+    iosScheme: 'https',
+    hostname: 'pizoo.app'
   },
-  android: {
-    buildOptions: {
-      keystorePath: undefined,
-      keystoreAlias: undefined,
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 2000,
+      backgroundColor: '#667eea',
+      showSpinner: true,
+      spinnerColor: '#ffffff'
+    },
+    Camera: {
+      permissions: {
+        camera: 'Camera permission is required for profile photos'
+      }
+    },
+    Geolocation: {
+      permissions: {
+        location: 'Location permission is required to find nearby users'
+      }
+    },
+    PushNotifications: {
+      presentationOptions: ['badge', 'sound', 'alert']
     }
   }
 };
