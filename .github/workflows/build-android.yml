@@ -47,7 +47,7 @@ jobs:
       env:
         DISABLE_ESLINT_PLUGIN: true
         GENERATE_SOURCEMAP: false
-        REACT_APP_BACKEND_URL: ${{ secrets.BACKEND_URL || 'https://pizoo-dating.preview.emergentagent.com' }}
+        REACT_APP_BACKEND_URL: ${{ secrets.BACKEND_URL || 'https://pizoomatch.preview.emergentagent.com' }}
         
     - name: Sync Capacitor
       working-directory: ./frontend
