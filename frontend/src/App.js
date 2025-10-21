@@ -35,6 +35,12 @@ api.interceptors.request.use((config) => {
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    // Set RTL for Arabic
+    document.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
 
   useEffect(() => {
     const token = localStorage.getItem("pizoo_token");
