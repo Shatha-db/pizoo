@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && yarn install && yarn build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && yarn install",
-  "framework": null,
+  "builds": [
+    {
+      "src": "apps/web/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "buildCommand": "cd apps/web && yarn install && yarn build",
+  "outputDirectory": "apps/web/build",
+  "installCommand": "cd apps/web && yarn install",
+  "framework": "create-react-app",
   "rewrites": [
     {
       "source": "/(.*)",
